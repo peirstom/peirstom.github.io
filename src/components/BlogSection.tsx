@@ -12,6 +12,7 @@ const posts = [
   },
   {
     title: "DevSecOps Pipeline Patterns with GitLab CI/CD",
+    slug: "devsecops-pipeline-patterns-gitlab",
     excerpt: "Most teams bolt security onto their pipeline as an afterthought — a SAST scan here, a container check there. I've spent the past two years designing pipelines where security is a first-class citizen. This piece covers how I structure GitLab CI/CD stages to run SAST, DAST, and dependency scanning in parallel, enforce branch protection rules, and gate releases without creating bottlenecks. The goal: shift left without slowing down.",
     date: "Jan 28, 2026",
     readTime: "6 min read",
@@ -19,6 +20,7 @@ const posts = [
   },
   {
     title: "React Performance in Enterprise Apps",
+    slug: "react-performance-in-enterprise-apps",
     excerpt: "When your React app serves thousands of users and ships weekly, performance isn't optional — it's infrastructure. I share the techniques I use to keep enterprise frontends fast: code-splitting strategies that actually work, memoization patterns that don't add complexity, and state management approaches that scale. Real examples from production apps where shaving 200ms off initial load made a measurable business impact.",
     date: "Jan 15, 2026",
     readTime: "10 min read",
