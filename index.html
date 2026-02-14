@@ -17,6 +17,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Lovable" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script>
+      (function () {
+        const redirectPath = sessionStorage.getItem("__app_redirect");
+        if (!redirectPath) return;
+
+        sessionStorage.removeItem("__app_redirect");
+        const normalizedPath = redirectPath.startsWith("/") ? redirectPath : `/${redirectPath}`;
+        window.history.replaceState(null, "", normalizedPath);
+      })();
+    </script>
   </head>
 
   <body>

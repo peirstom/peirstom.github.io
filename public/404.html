@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <noscript>This site requires JavaScript for routing. Please return to the home page.</noscript>
+    <script>
+      (function () {
+        var redirectPath = window.location.pathname + window.location.search + window.location.hash;
+
+        if (!redirectPath || redirectPath === "/") {
+          window.location.replace("/");
+          return;
+        }
+
+        sessionStorage.setItem("__app_redirect", redirectPath);
+        window.location.replace("/");
+      })();
+    </script>
+  </body>
+</html>
