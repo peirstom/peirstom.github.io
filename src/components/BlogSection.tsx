@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
     title: "Securing AWS Lambda at Scale",
+    slug: "securing-aws-lambda-at-scale",
     excerpt: "Lambda functions are deceptively simple to deploy — and deceptively easy to misconfigure. In this post, I walk through how I implement least-privilege IAM policies, layer runtime protections, and monitor for anomalies across hundreds of functions. From scoping execution roles to using Lambda extensions for real-time threat detection, these are the patterns that have kept production workloads secure without sacrificing developer velocity.",
     date: "Feb 10, 2026",
     readTime: "8 min read",
@@ -43,24 +45,47 @@ const BlogSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group py-8 first:pt-0 last:pb-0 cursor-pointer"
+                className="group py-8 first:pt-0 last:pb-0"
               >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="font-sans text-xs text-muted-foreground">{post.date}</span>
-                  <span className="text-muted-foreground">·</span>
-                  <span className="font-sans text-xs text-muted-foreground">{post.readTime}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-3 font-light">{post.excerpt}</p>
-                <div className="flex gap-2">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="font-sans text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {post.slug ? (
+                  <Link to={`/blog/${post.slug}`} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded-md">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-sans text-xs text-muted-foreground">{post.date}</span>
+                      <span className="text-muted-foreground">·</span>
+                      <span className="font-sans text-xs text-muted-foreground">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-3 font-light">{post.excerpt}</p>
+                    <div className="flex gap-2">
+                      {post.tags.map((tag) => (
+                        <span key={tag} className="font-sans text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </Link>
+                ) : (
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-sans text-xs text-muted-foreground">{post.date}</span>
+                      <span className="text-muted-foreground">·</span>
+                      <span className="font-sans text-xs text-muted-foreground">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-3 font-light">{post.excerpt}</p>
+                    <div className="flex gap-2">
+                      {post.tags.map((tag) => (
+                        <span key={tag} className="font-sans text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.article>
             ))}
           </div>
