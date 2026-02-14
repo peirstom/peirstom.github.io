@@ -1,26 +1,24 @@
-# peirstom.github.io
+# Tom Peirs CV Site
 
-This repository now contains both the published CV site and the source code that builds it.
+Personal CV/portfolio site built with Vite, React, TypeScript, TailwindCSS, shadcn-ui components, and Framer Motion.
 
-## Structure
-- `/site` – the Vite + React source (copied from the previous `tom-peirs.dev` project).
-- Repository root – static build artifacts that GitHub Pages serves at https://peirstom.github.io/.
+## Development
+1. Install dependencies: `npm install`
+2. Start Vite dev server: `npm run dev`
+3. Run tests: `npm run test`
+4. Create a production build locally: `npm run build`
 
-## Develop locally
-```sh
-cd site
-npm install      # first time only
-npm run dev      # start Vite locally
-```
+## Deployment
+GitHub Pages is configured to build automatically using `.github/workflows/deploy.yml`. Every push to `main` triggers the workflow, which:
+- installs dependencies and runs `npm run build`
+- uploads the `dist/` folder as a Pages artifact
+- deploys the artifact so `https://peirstom.github.io` is always up to date
 
-## Deploy
-```sh
-cd site
-npm run deploy   # builds and copies /dist into the repo root
-cd ..
-git add -A
-git commit -m "Deploy site"
-git push
-```
+No manual copying of `dist/` is required. Just push to `main` and GitHub Actions handles the rest.
 
-The deploy script preserves `/site`, `.git`, `.github`, and `README.md` so configuration files stay safe. Set the `PAGES_DIR` env var if you ever need to deploy to a different folder.
+## Project Structure
+- `src/` – React components, pages, hooks, and utilities
+- `public/` – static assets copied to the final build
+- `vite.config.ts` – Vite configuration (React + TypeScript + alias)
+- `tailwind.config.ts` and `src/index.css` – Tailwind theme setup
+- `vitest.config.ts` plus `src/test/` – Vitest + Testing Library configuration
