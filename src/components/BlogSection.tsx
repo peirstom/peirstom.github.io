@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 const posts = [
   {
+    title: "Automated Status Pages and Year-to-Date SLOs in Datadog",
+    slug: "datadog-status-pages-and-slos",
+    excerpt: "Datadog gives engineers deep infrastructure visibility, but stakeholder communication and long-term reliability metrics need an extra layer. I walk through how we built a zero-maintenance automated status page — wired to composite monitors via Workflow Automations and the Status Pages API — alongside a year-to-date SLO dashboard powered by custom health metrics and historical backfill. No manual updates, no 90-day window limits.",
+    date: "Apr 26, 2026",
+    readTime: "9 min read",
+    tags: ["Datadog", "Observability", "SLO"],
+  },
+  {
     title: "Securing AWS Lambda at Scale",
     slug: "securing-aws-lambda-at-scale",
     excerpt: "Lambda functions are deceptively simple to deploy — and deceptively easy to misconfigure. In this post, I walk through how I implement least-privilege IAM policies, layer runtime protections, and monitor for anomalies across hundreds of functions. From scoping execution roles to using Lambda extensions for real-time threat detection, these are the patterns that have kept production workloads secure without sacrificing developer velocity.",

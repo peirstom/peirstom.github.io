@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SecuringAwsLambda from "./pages/blog/SecuringAwsLambda";
 import DevSecOpsPipeline from "./pages/blog/DevSecOpsPipeline";
 import ReactPerformance from "./pages/blog/ReactPerformance";
+import DatadogStatusPagesSLOs from "./pages/blog/DatadogStatusPagesSLOs";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/blog/securing-aws-lambda-at-scale" element={<SecuringAwsLambda />} />
           <Route path="/blog/devsecops-pipeline-patterns-gitlab" element={<DevSecOpsPipeline />} />
           <Route path="/blog/react-performance-in-enterprise-apps" element={<ReactPerformance />} />
+          <Route path="/blog/datadog-status-pages-and-slos" element={<DatadogStatusPagesSLOs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
