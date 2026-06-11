@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 const posts = [
   {
+    title: "Building a Knowledge-Base MCP for Engineering Context",
+    slug: "knowledge-base-mcp-for-engineering-context",
+    excerpt: "An AI agent is only as good as the context you give it — yet in any mature company that context is scattered across Confluence, dozens of repositories, and Terraform modules. I walk through how I built a personal knowledge-base MCP: a Python server, a RAG pipeline that chunks and embeds pipelines, infrastructure and docs into a vector store, and a deployment on AWS Bedrock AgentCore that refreshes itself weekly from S3. The result is an agent that never starts from zero — sharper code, fewer tokens, and full context from the first message.",
+    date: "Jun 11, 2026",
+    readTime: "12 min read",
+    tags: ["MCP", "RAG", "AWS"],
+  },
+  {
     title: "Automated Status Pages and Year-to-Date SLOs in Datadog",
     slug: "datadog-status-pages-and-slos",
     excerpt: "Datadog gives engineers deep infrastructure visibility, but stakeholder communication and long-term reliability metrics need an extra layer. I walk through how we built a zero-maintenance automated status page — wired to composite monitors via Workflow Automations and the Status Pages API — alongside a year-to-date SLO dashboard powered by custom health metrics and historical backfill. No manual updates, no 90-day window limits.",
