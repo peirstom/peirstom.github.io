@@ -13,9 +13,9 @@ const ContactSection = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md mx-auto font-light">
-            I'm currently available for freelance projects and consulting. 
-            Whether you need cloud architecture, security expertise, or frontend development — 
-            let's talk.
+            I'm available for project work and consulting engagements: infrastructure
+            assessments, Terraform and CI/CD overhauls, or ongoing platform support.
+            If your setup is slowing your team down, let's talk.
           </p>
           <a
             href="mailto:peirstom@gmail.com"

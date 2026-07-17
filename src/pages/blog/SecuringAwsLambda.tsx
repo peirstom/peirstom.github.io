@@ -16,7 +16,7 @@ const sections = [
     title: "2. Bake Guardrails into CI/CD",
     body: [
       "A Lambda that ships without scrutiny will accumulate permissions. I wire the pipeline so that every merge request runs: (a) IaC scanning (cfn-nag + Checkov) for CloudFormation/CDK templates, (b) policy linting via `iam-live` to spot unused actions, and (c) unit tests that exercise the handler with mocked context.",
-      "The pipeline publishes a signed SAR (Serverless Application Repository) layer containing baseline observability tooling—AWS Powertools, structured logging, and a custom metric decorator—so every function gets the same safeguards by default.",
+      "The pipeline publishes a signed SAR (Serverless Application Repository) layer containing baseline observability tooling (AWS Powertools, structured logging, and a custom metric decorator), so every function gets the same safeguards by default.",
     ],
     highlights: [
       "Fail the build when a function-env pair lacks mandatory environment variables such as `POWERTOOLS_SERVICE_NAME`.",

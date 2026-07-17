@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://peirstom.github.io/</loc></url>
+  <url><loc>https://peirstom.github.io/blog/five-signs-terraform-slowing-your-team</loc></url>
+  <url><loc>https://peirstom.github.io/blog/knowledge-base-mcp-for-engineering-context</loc></url>
+  <url><loc>https://peirstom.github.io/blog/datadog-status-pages-and-slos</loc></url>
+  <url><loc>https://peirstom.github.io/blog/securing-aws-lambda-at-scale</loc></url>
+  <url><loc>https://peirstom.github.io/blog/devsecops-pipeline-patterns-gitlab</loc></url>
+  <url><loc>https://peirstom.github.io/blog/react-performance-in-enterprise-apps</loc></url>
+</urlset>

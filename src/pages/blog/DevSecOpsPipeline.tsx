@@ -4,7 +4,7 @@ const phases = [
   {
     title: "Blueprint: Security as the Default",
     paragraphs: [
-      "Every pipeline starts with alignment between platform, product, and security. I document threat models per service, define risk appetite, and map controls to pipeline stages. The guardrails become part of the merge request template so developers know exactly which evidences an MR must produce before it can ship.",
+      "Every pipeline starts with alignment between platform, product, and security. I document threat models per service, define risk appetite, and map controls to pipeline stages. The guardrails become part of the merge request template so developers know exactly which evidence an MR must produce before it can ship.",
       "From there I build a reusable GitLab CI/CD template (think `include:`) that exposes toggles for language-specific scanners but keeps the core flow identical: lint → unit → SCA/SAST → build artifact → DAST/IaC → deploy. Pipelines inherit the template, so we avoid bespoke YAML that drifts out of compliance.",
     ],
     callouts: [

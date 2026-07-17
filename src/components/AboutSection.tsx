@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Shield, Cloud, Code, Terminal, Sparkles } from "lucide-react";
+import { Shield, Cloud, Layers, Boxes, Sparkles } from "lucide-react";
 
 const skills = [
-  { icon: Cloud, label: "AWS", description: "EC2, Lambda, ECS, IAM, CloudFormation, CDK" },
-  { icon: Shield, label: "DevSecOps", description: "CI/CD pipelines, SAST/DAST, container security, GitLab CI/CD, release workflows, branching/protection rules" },
-  { icon: Code, label: "Frontend", description: "React, Vue, Angular, Next.js, TypeScript" },
-  { icon: Terminal, label: "Tooling", description: "Terraform, Docker, Kubernetes, GitHub Actions" },
-  { icon: Sparkles, label: "AI", description: "LLM integration, AI-powered tooling, prompt engineering, automation with AI" },
+  { icon: Cloud, label: "AWS & Azure", description: "Multi-account architectures, IAM, networking, Control Tower, cost-aware design" },
+  { icon: Layers, label: "Infrastructure as Code", description: "Terraform module and state design, reusable IaC, environments that don't drift" },
+  { icon: Shield, label: "CI/CD & DevSecOps", description: "GitLab CI/CD, pipeline templates, security and quality gates, release workflows" },
+  { icon: Boxes, label: "Platforms & Containers", description: "Kubernetes, Docker, Helm, observability with Datadog and Prometheus/Grafana" },
+  { icon: Sparkles, label: "AI-Assisted Engineering", description: "LLM integration, MCP servers, RAG pipelines, AI-powered engineering workflows" },
 ];
 
 const AboutSection = () => {
@@ -22,18 +22,25 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
           <div className="space-y-5 text-muted-foreground text-lg leading-relaxed mb-12 font-light">
             <p>
-              I'm a DevSecOps engineer who thrives at the intersection of development, 
-              security, and operations. With deep expertise in AWS and a strong frontend 
-              background, I bring a unique perspective to building and securing modern 
-              web applications.
+              I'm a platform and DevOps engineer. My work is making cloud infrastructure
+              effective, efficient and easy to work with: low-maintenance platforms that
+              developers actually like using.
             </p>
             <p>
-              Whether it's architecting cloud infrastructure, embedding security into 
-              CI/CD pipelines, or crafting polished user interfaces — I focus on 
-              delivering solutions that are both robust and elegant.
+              Ten years across enterprise and scale-up environments taught me the same
+              lesson everywhere. When infrastructure is organized and automated, teams
+              move fast. When it isn't, everything slows down: deploys get scary,
+              environments drift apart, and one overloaded engineer becomes the
+              bottleneck for the whole company.
             </p>
             <p>
-              Currently available for <span className="text-primary font-medium">freelance work</span> and 
+              That transition is my specialty. I unify grown Terraform setups into clean,
+              reusable modules, build CI/CD pipelines with security and quality gates
+              baked in, and turn manual deployment processes into automation nobody has
+              to think about.
+            </p>
+            <p>
+              Currently available for <span className="text-primary font-medium">project work</span> and
               consulting engagements.
             </p>
           </div>

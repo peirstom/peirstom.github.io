@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="py-8 px-6 border-t border-border">
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
         <div className="flex gap-5">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://github.com/peirstom" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <Github className="w-5 h-5" />
           </a>
           <a href="https://www.linkedin.com/in/tom-peirs/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">

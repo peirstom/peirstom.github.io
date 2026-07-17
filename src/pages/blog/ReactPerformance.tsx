@@ -15,7 +15,7 @@ const topics = [
   {
     title: "Control State Explosion",
     content: [
-      "Enterprise teams often propagate global context everywhere. I separate concerns: server cache lives in React Query, view state stays local, and cross-cutting events push through a typed event bus. Memoization is applied intentionally—`useMemo` protects derived arrays, while `useCallback` pairs with dependency arrays tied to primitives, not objects.",
+      "Enterprise teams often propagate global context everywhere. I separate concerns: server cache lives in React Query, view state stays local, and cross-cutting events push through a typed event bus. Memoization is applied intentionally: `useMemo` protects derived arrays, while `useCallback` pairs with dependency arrays tied to primitives, not objects.",
       "For complex forms or tables, I snapshot selectors using Zustand or Jotai so only the relevant rows re-render. React DevTools flame charts highlight components with >5ms render cost; those become candidates for virtualization (React Window) or `memo`-wrapped cells.",
     ],
     checklist: [
